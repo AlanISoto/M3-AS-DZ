@@ -25,7 +25,7 @@ const ImageUploader = () => {
       const response = await axios.post(
         // Send post request with image
 
-        "http://localhost:5000/api/upload",
+        "https://m3-as-dz.azurewebsites.net/api/upload",
         formData
       );
 
