@@ -3,7 +3,7 @@ const router = express.Router();
 const axios = require("axios");
 
 router.get("/test", (req, res) => {
-  res.send("Hello World");
+  res.send("Hello World!");
 });
 
 router.post("/upload", async (req, res) => {
