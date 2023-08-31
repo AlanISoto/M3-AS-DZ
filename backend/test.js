@@ -10,7 +10,7 @@ describe('Static responses are working', () => {
   it('should return hello world on test', async () => {
     const response = await request(app).get('/api/test')
     expect(response.status).toEqual(200)
-    expect(response.text).toEqual('Hello World!')
+    expect(response.text).toEqual('Hello World!!')
   })
 
   it('should return cool message on test2', async () => {
