@@ -42,3 +42,26 @@ describe('upload route', () => {
     expect(aiPredictions.response.predictions.length).toBeGreaterThan(0)
   })
 })
+
+describe('upload route', () => {
+  jest.setTimeout(20000)
+  const imagePath = path.join(
+    __dirname,
+    '../frontend/public/carImages/ae86red.jpg'
+  )
+
+  const imageBuffer = fs.readFileSync(imagePath)
+
+  it('should some types on a correct image upload', async () => {
+    const res = await request(app)
+      .post('/api/upload')
+      .attach('image', imageBuffer, 'image.jpg')
+
+    const aiPredictions = JSON.parse(res.text)
+    // console.log(aiPredictions)
+
+    expect(res.status).toEqual(200)
+    expect(aiPredictions.response.predictions).toBeDefined()
+    expect(aiPredictions.response.predictions.length).toBeGreaterThan(0)
+  })
+})
