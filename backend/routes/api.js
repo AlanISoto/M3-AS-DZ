@@ -13,7 +13,7 @@ router.get('/test2', (req, res) => {
 })
 
 router.get('/test3', (req, res) => {
-  const imagePath = path.join(__dirname, './images/cat.jpg') // Update this path
+  const imagePath = path.join(__dirname, '../images/cat.jpg') // Update this path
   const imageStream = fs.createReadStream(imagePath)
 
   res.setHeader('Content-Type', 'image/jpeg')
