@@ -56,7 +56,7 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'M3-AS-DZ'
+          app-name: 'racecarseer'
           slot-name: 'production'
           publish-profile: ${{ secrets.DANS_SECRET }}
           package: .
