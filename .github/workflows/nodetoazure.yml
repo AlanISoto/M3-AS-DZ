@@ -42,7 +42,7 @@ jobs:
   deploy-test:
     runs-on: ubuntu-latest
     needs: build
-    if: github.event_name == 'pull_request' && github.base_ref == 'refs/head/develop'
+    if:
     environment:
       name: 'production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
