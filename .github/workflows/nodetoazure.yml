@@ -21,15 +21,12 @@ jobs:
         with:
           node-version: "18.x"
 
-      - name: npm install and build
+      - name: npm install, build and tests
         working-directory: ./backend
         run: |
           npm install
           npm run build --if-present
-
-      - name: Run unit tests
-        working-directory: ./backend
-        run: npx jest
+          npm run test --if-present
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
