@@ -42,7 +42,6 @@ jobs:
   deploy-test:
     runs-on: ubuntu-latest
     needs: build
-    if:
     environment:
       name: 'production'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
