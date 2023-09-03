@@ -4,8 +4,6 @@ const apiRoutes = require("./routes/api");
 const multer = require("multer");
 
 const app = express();
-// Testing
-app.use(cors());
 
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
